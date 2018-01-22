@@ -1,5 +1,7 @@
-from typing import List, Tuple
+import math
+from typing import List, Tuple, Dict
 
+import numpy as np
 from sklearn.utils import Bunch
 
 
@@ -26,7 +28,7 @@ class Sample:
             if index < attribute_names_count:
                 result += " %s: %s," % (attribute_names[index], attribute)
             else:
-                result += " %s," % (attribute)
+                result += " %s," % attribute
         result = result[:-1]
         return result
 
@@ -35,13 +37,82 @@ class Sample:
 
 
 class Samples:
+
+    @classmethod
+    def generate_spaced_colors(cls, n: int) -> List[Tuple[int, int, int]]:
+        max_value = 255 ** 3
+        interval = int(max_value // n)
+        colors = [hex(I)[2:].zfill(6) for I in range(0, interval * n, interval)]
+        return [(int(i[:2], 16), int(i[2:4], 16), int(i[4:], 16)) for i in colors]
+
+    @classmethod
+    def normalize_vector(cls, vector: List[float]) -> float:
+        res = 0
+        for x in vector:
+            res += x ** 2
+        return math.sqrt(res)
+
+    @classmethod
+    def load_from_bunch(cls, data: Bunch):
+        """
+        Takes as an input any Bunch from sklearn.datasets
+
+        :param data: Bunch returned from for e.g. load_digits()
+        :return: Samples object
+        """
+        samples_list: List[Sample] = []
+        for index, class_index in enumerate(data['target']):
+            attribute_names = data.get('feature_names', [])
+            attributes = data['data'][index]
+            # Not all Bunches have 'target_names' set
+            try:
+                class_name = data['target_names'][class_index]
+            except (IndexError, KeyError):
+                class_name = class_index
+            samples_list.append(Sample(str(class_name), attribute_names, attributes))
+
+        return Samples(samples_list)
+
+    @classmethod
+    def angle_between_vectors(cls, vector1: List[float], vector2: List[float]) -> float:
+        dot_product = np.dot(vector1, vector2)
+        norm1 = Samples.normalize_vector(vector1)
+        norm2 = Samples.normalize_vector(vector2)
+
+        res = dot_product / (norm1 * norm2)
+
+        if math.fabs(res) > 1:
+            res = res / math.fabs(res)
+        return math.acos(res)
+
     def __init__(self, samples: List[Sample]):
         self.samples = {}
+        self.class_colors: Dict[str, str] = {}
+        class_names = set()
         for sample in samples:
             if sample.get_class_name() in self.samples:
                 self.samples[sample.get_class_name()].append(sample)
             else:
                 self.samples[sample.get_class_name()] = [sample]
+                class_names.add(sample.get_class_name())
+
+        generated_colors = Samples.generate_spaced_colors(len(class_names))
+        for index, class_name in enumerate(class_names):
+            self.class_colors[class_name] = '#%02x%02x%02x' % generated_colors[index]
+
+    def get_visual_data(self) -> List[Tuple[float, float, str]]:
+        unit = np.ones(len(self.get_all_samples()[0].get_attributes()))
+        result = []
+        for sample in self.get_all_samples():
+            result.append([
+                Samples.normalize_vector(sample.get_attributes()),
+                Samples.angle_between_vectors(unit.tolist(), sample.get_attributes()),
+                self.get_color_for_class(sample.get_class_name())
+            ])
+        return result
+
+    def get_color_for_class(self, class_name: str):
+        return self.class_colors.get(class_name, '#000000')
 
     def get_samples_for_class(self, class_name: str) -> List[Sample]:
         if class_name in self.samples:
@@ -71,24 +142,3 @@ class Samples:
             test_data.extend(class_samples[:count_percent])
             validation_data.extend(class_samples[count_percent:])
         return test_data, validation_data
-    
-    @classmethod
-    def load_from_bunch(cls, data: Bunch):
-        """
-        Takes as an input any Bunch from sklearn.datasets
-
-        :param data: Bunch returned from for e.g. load_digits()
-        :return: Samples object
-        """
-        samples_list: List[Sample] = []
-        for index, class_index in enumerate(data['target']):
-            attribute_names = data.get('feature_names', [])
-            attributes = data['data'][index]
-            # Not all Bunches have 'target_names' set
-            try:
-                class_name = data['target_names'][class_index]
-            except (IndexError, KeyError):
-                class_name = class_index
-            samples_list.append(Sample(str(class_name), attribute_names, attributes))
-
-        return Samples(samples_list)
