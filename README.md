@@ -9,7 +9,7 @@ It can work on any sklearn dataset or you can initialize the Samples class on yo
 * Optional: Virtualenv and Virtualenvwrapper
 
 ## How to run
-* Install in virtual env.
+* Install in virtual env. or install it globally
   * Create virtual env. `mkvirtualenv -p python3 notebook`
   * Activate it `workon notebook`
   * Install deps. `pip install -r requirements.txt`
