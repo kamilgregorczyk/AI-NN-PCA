@@ -1,6 +1,7 @@
 import math
 from typing import List, Tuple, Dict
 
+import matplotlib.pyplot as plt
 import numpy as np
 from sklearn.utils import Bunch
 
@@ -88,8 +89,16 @@ class Samples:
     def __init__(self, samples: List[Sample]):
         self.samples = {}
         self.class_colors: Dict[str, str] = {}
+        if len(samples) < 2:
+            raise Exception("Samples parameter has to have at least 3 samples")
+
+        attributes_count = len(samples[0].get_attributes())
         class_names = set()
         for sample in samples:
+
+            if len(sample.get_attributes()) != attributes_count:
+                raise Exception("All samples must have the same number of attributes")
+
             if sample.get_class_name() in self.samples:
                 self.samples[sample.get_class_name()].append(sample)
             else:
@@ -100,16 +109,13 @@ class Samples:
         for index, class_name in enumerate(class_names):
             self.class_colors[class_name] = '#%02x%02x%02x' % generated_colors[index]
 
-    def get_visual_data(self) -> List[Tuple[float, float, str]]:
-        unit = np.ones(len(self.get_all_samples()[0].get_attributes()))
-        result = []
-        for sample in self.get_all_samples():
-            result.append([
-                Samples.normalize_vector(sample.get_attributes()),
-                Samples.angle_between_vectors(unit.tolist(), sample.get_attributes()),
-                self.get_color_for_class(sample.get_class_name())
-            ])
-        return result
+    def visualize(self):
+        visual_data: List[Tuple[float, float, str]] = self.__get_visual_data()
+        x = list(zip(*visual_data))[0]
+        y = list(zip(*visual_data))[1]
+        colors = list(zip(*visual_data))[2]
+        plt.scatter(x, y, c=colors)
+        plt.show()
 
     def get_color_for_class(self, class_name: str):
         return self.class_colors.get(class_name, '#000000')
@@ -142,3 +148,14 @@ class Samples:
             test_data.extend(class_samples[:count_percent])
             validation_data.extend(class_samples[count_percent:])
         return test_data, validation_data
+
+    def __get_visual_data(self) -> List[Tuple[float, float, str]]:
+        unit = np.ones(len(self.get_all_samples()[0].get_attributes()))
+        result = []
+        for sample in self.get_all_samples():
+            result.append([
+                Samples.normalize_vector(sample.get_attributes()),
+                Samples.angle_between_vectors(unit.tolist(), sample.get_attributes()),
+                self.get_color_for_class(sample.get_class_name())
+            ])
+        return result

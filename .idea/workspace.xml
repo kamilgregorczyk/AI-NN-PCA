@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="db8245c3-4610-4238-9419-604c51a36cee" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/artificial.ipynb" afterPath="$PROJECT_DIR$/artificial.ipynb" />
       <change beforePath="$PROJECT_DIR$/samples.py" afterPath="$PROJECT_DIR$/samples.py" />
       <change beforePath="$PROJECT_DIR$/zadanie_domowe.ipynb" afterPath="$PROJECT_DIR$/zadanie_domowe.ipynb" />
     </list>
@@ -16,19 +17,19 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/untitled2$start.coverage" NAME="start Coverage Results" MODIFIED="1511597509657" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/untitled2$untitled2.coverage" NAME="untitled2 Coverage Results" MODIFIED="1512946720561" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/untitled2$untitled2.coverage" NAME="untitled2 Coverage Results" MODIFIED="1516698248177" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/untitled2$test.coverage" NAME="test Coverage Results" MODIFIED="1516653218296" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/untitled2$instances.coverage" NAME="instances Coverage Results" MODIFIED="1512914928697" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5">
+    <splitter split-orientation="horizontal" split-proportion="0.38764644">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="samples.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="samples.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/samples.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="375">
-                  <caret line="102" column="43" lean-forward="false" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
+                <state relative-caret-position="165">
+                  <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#11#0" expanded="true" />
                   </folding>
@@ -36,20 +37,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="artificial.ipynb" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/artificial.ipynb">
-              <provider selected="true" editor-type-id="ipnb-editor">
-                <state>
-                  <selected id="0" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="zadanie_domowe.ipynb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="zadanie_domowe.ipynb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/zadanie_domowe.ipynb">
               <provider selected="true" editor-type-id="ipnb-editor">
                 <state>
-                  <selected id="9" />
+                  <selected id="8" />
                 </state>
               </provider>
             </entry>
@@ -58,7 +50,16 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="artificial.ipynb" pinned="false" current-in-tab="true">
+          <file leaf-file-name="zadanie_domowe.ipynb" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/zadanie_domowe.ipynb">
+              <provider selected="true" editor-type-id="ipnb-editor">
+                <state>
+                  <selected id="10" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="artificial.ipynb" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/artificial.ipynb">
               <provider selected="true" editor-type-id="ipnb-editor">
                 <state>
@@ -90,6 +91,8 @@
       <find>instance</find>
       <find>Instances</find>
       <find>load_dia</find>
+      <find>new_data</find>
+      <find>new_da</find>
     </findStrings>
     <replaceStrings>
       <replace>Sample</replace>
@@ -106,9 +109,9 @@
         <option value="$PROJECT_DIR$/Untitled.ipynb" />
         <option value="$PROJECT_DIR$/signals_2.ipynb" />
         <option value="$PROJECT_DIR$/signals_1.ipynb" />
-        <option value="$PROJECT_DIR$/artificial.ipynb" />
         <option value="/code.py" />
         <option value="$PROJECT_DIR$/instances.py" />
+        <option value="$PROJECT_DIR$/artificial.ipynb" />
         <option value="$PROJECT_DIR$/samples.py" />
         <option value="$PROJECT_DIR$/zadanie_domowe.ipynb" />
       </list>
@@ -264,13 +267,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1200" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39219165" sideWeight="0.5021299" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32919255" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32830524" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20763087" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.39219165" sideWeight="0.4978701" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28700745" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -465,13 +469,6 @@
     <entry file="file://$PROJECT_DIR$/iris.csv" />
     <entry file="file://$PROJECT_DIR$/signals_2.ipynb" />
     <entry file="file://$PROJECT_DIR$/signals_1.ipynb" />
-    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.3/python_stubs/-658140011/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="2827" column="8" lean-forward="false" selection-start-line="2827" selection-start-column="8" selection-end-line="2827" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/typing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
@@ -532,28 +529,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="102" column="43" lean-forward="false" selection-start-line="102" selection-start-column="43" selection-end-line="102" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/nauka/lib/python3.6/site-packages/matplotlib/pyplot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
           <caret line="3339" column="4" lean-forward="false" selection-start-line="3339" selection-start-column="4" selection-end-line="3339" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/artificial.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
         </state>
       </provider>
     </entry>
@@ -573,10 +553,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/samples.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="36" lean-forward="true" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2017.3/python_stubs/-658140011/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="3587" column="8" lean-forward="false" selection-start-line="3587" selection-start-column="8" selection-end-line="3587" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/artificial.ipynb">
+      <provider selected="true" editor-type-id="ipnb-editor">
+        <state>
+          <selected id="2" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/zadanie_domowe.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
-          <selected id="9" />
+          <selected id="10" />
         </state>
       </provider>
     </entry>
