@@ -3,6 +3,8 @@ Simple jupyter notebook which performs NN and PCA algorithms on sklearn datasets
 
 It can work on any sklearn dataset or you can initialize the Samples class on your own and everything should be fine.
 
+Github link: https://github.com/kamilgregorczyk/AI-NN-PCA
+
 ## Requirements
 * Python > 3.5
 * Dependencies from requirements.txt file
